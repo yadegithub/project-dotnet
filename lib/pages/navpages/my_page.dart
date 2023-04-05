@@ -24,6 +24,7 @@ class _EstatePropertyState extends State<EstateProperty> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
        bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
         index: selsctedIconIndex,
