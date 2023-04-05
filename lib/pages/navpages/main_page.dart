@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_pfe/pages/navpages/bar_item_page.dart';
 import 'package:project_pfe/pages/navpages/home_page.dart';
@@ -16,7 +17,7 @@ class _MainPageState extends State<MainPage> {
     HomePage(),
    BarItemPage(),
    SearchPage(),
-   MyPage()
+   EstateProperty()
 
   ];
   int currentIndex=0;
@@ -43,11 +44,11 @@ setState(() {
         showUnselectedLabels: false,
         elevation: 0,
         items: [
-          BottomNavigationBarItem(label: ("Home"),icon: Icon(Icons.apps)),
-          BottomNavigationBarItem(label: ("bar"),icon: Icon(Icons.bar_chart_sharp)),
-          BottomNavigationBarItem(label: ("search"),icon: Icon(Icons.search)),
-
-          BottomNavigationBarItem(label: ("persone"),icon: Icon(Icons.person)),
+          // BottomNavigationBarItem(label: ("Home"),icon: Icon(CupertinoIcons.home)),
+          // BottomNavigationBarItem(label: ("Favorites"),icon: Icon(CupertinoIcons.heart)),
+          // BottomNavigationBarItem(label: ("Search"),icon: Icon(CupertinoIcons.search)),
+          // BottomNavigationBarItem(label: ("Profile"),icon: Icon(Icons.person)),  
+          // BottomNavigationBarItem(label: ("Messages"),icon: Icon(Icons.message_outlined)),
 
         ],
       ),

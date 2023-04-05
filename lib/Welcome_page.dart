@@ -7,6 +7,7 @@ import 'package:project_pfe/login_with_googel.dart';
 
 import 'package:project_pfe/wigdet/app_large_text.dart';
 import 'package:project_pfe/wigdet/app_text.dart';
+import 'package:project_pfe/wigdet/button.dart';
 
 
 
@@ -51,13 +52,16 @@ class _WelcomPageState extends State<WelcomPage> {
         
         size: 14,
       )
-      )
+      ),
+      //Button(),
             ],
            )
               ],
             )
               ),
-              SizedBox(height: 50,),
+              
+           
+              SizedBox(height: 30,),
               //login button
               InkWell(
                 onTap: () {
