@@ -2,7 +2,8 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:project_pfe/constants/constants.dart';
 import 'package:project_pfe/models/item_model.dart';
-import 'package:project_pfe/pages/navpages/Estate_Property.dart';
+import 'package:project_pfe/pages/navpages/customappbar.dart';
+
 import 'package:project_pfe/wigdet/house_card.dart';
 import 'package:project_pfe/wigdet/recomendation.dart';
 import 'package:project_pfe/wigdet/search_field.dart';
@@ -10,6 +11,7 @@ import 'package:project_pfe/wigdet/select_category.dart';
 import 'package:project_pfe/wigdet/suggestion_list.dart';
 
 import '../../models/recommended_places.dart';
+
 import '../../wigdet/nearby_places.dart';
 
 class EstateProperty extends StatefulWidget {
@@ -28,7 +30,7 @@ class _EstatePropertyState extends State<EstateProperty> {
        bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
         index: selsctedIconIndex,
-        buttonBackgroundColor: primary,
+        buttonBackgroundColor: Color(0xFF26A69A),
         height: 60.0,
         color: white,
         onTap: (index) {
@@ -49,31 +51,22 @@ class _EstatePropertyState extends State<EstateProperty> {
       ),
       
       
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Padding(padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-             CustomAppBar(),
-            SearchField(),
-            SelectCategory(),
-            SizedBox(height: 10,),
-            SuggestionList(title: "Recommendation for you",items: item.recommendation,),
-           // SizedBox(height: 10,),
-           // HouseCard(),
-           Recomendation(),
-           // SizedBox(height: 10,),
-            SuggestionList(title: "Nearby from you",items: item.recommendation,),
-            Courses(),
-            
-          ],
-        ),
-        ),
-        
-      ),
+      //backgroundColor: Colors.white,
+      body:Container(
+        child:getSelectedWidget(index: index) ,
+      )
+      );
       
-    );
     
+    Widget getSelectedWidget({required int index}){
+    Widget widget;
+    switch(index){
+      widget = const my_page();
+      break;
+      case 1:
+       widget = const my_page();
+    }
+  }
   }
 
 

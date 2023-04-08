@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:project_pfe/constants/constants.dart';
 import 'package:project_pfe/wigdet/house_card.dart';
 
 import '../models/item_model.dart';
+
 
 class SuggestionList extends StatefulWidget {
   SuggestionList({this.title,this.items,Key? key}) : super(key: key);
@@ -16,8 +18,15 @@ class _SuggestionListState extends State<SuggestionList> {
   @override
   Widget build(BuildContext context) {
     return Container(
+    //   decoration: BoxDecoration(
+    //    gradient: LinearGradient(
+           
+    //  colors:[Colors.indigo.shade900,Colors.indigo.shade800,Colors.indigo.shade300,Colors.indigo.shade200] ),
+    //  ),
+      //color: secondary,
 child: Column(
   children: [
+    
     Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -28,7 +37,9 @@ child: Column(
         TextButton(onPressed: (() {
           
         }), child: 
-        Text("See All")
+        Text("See All",style: TextStyle(
+          color: Color(0xFF26A69A)
+        ),)
         )
       ],
     ),

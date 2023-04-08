@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
@@ -21,7 +22,7 @@ class CustomAppBar extends StatelessWidget {
                 padding: const EdgeInsets.all(appPadding / 8),
                 child: Container(
                   decoration: new BoxDecoration(
-                    color: primary,
+                    color: myColor,
                     shape: BoxShape.circle,
                   ),
                   child: Padding(
@@ -57,20 +58,26 @@ class CustomAppBar extends StatelessWidget {
 
           Row(
             children: [
+               Icon(
+                    Icons.mic_none_rounded,
+                    size: 30.0,
+                    color: Colors.grey.shade500,
+                  ),
               Stack(
                 children: [
                   Icon(
                     Icons.notifications_none_rounded,
                     size: 30.0,
+                    color: Colors.grey.shade500,
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        color: primary,
+                        color: Colors.red,
                         borderRadius: BorderRadius.circular(30.0)
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(4.0),
-                      child: Text('0',style: TextStyle(color: white,fontSize: 8),),
+                      child: Text('4',style: TextStyle(color: white,fontSize: 8),),
                     ),
                   )
                 ],
@@ -81,6 +88,7 @@ class CustomAppBar extends StatelessWidget {
                 child: Icon(
                   Icons.sort_rounded,
                   size: 30.0,
+                  color: Color(0xFF26A69A),
                 ),
               )
             ],

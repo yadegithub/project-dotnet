@@ -15,7 +15,8 @@ class Courses extends StatelessWidget {
       child: Container(
         height: size.height * 0.2,
         decoration: BoxDecoration(
-            color: white,
+         color: white,
+            
             borderRadius: BorderRadius.circular(30.0),
             boxShadow: [
               BoxShadow(
