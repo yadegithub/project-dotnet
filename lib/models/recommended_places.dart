@@ -40,5 +40,29 @@ rating: 4.4,
 type: "House",
 isFav: true
 ),
+RecommandedPlaceModel(image: 'lib/images/home4.jpeg',
+location: "Magtaa lhjar",
+rating: 4.4,
+type: "House",
+isFav: true
+),
+RecommandedPlaceModel(image: 'lib/images/home5.jpeg',
+location: "Magtaa lhjar",
+rating: 4.4,
+type: "House",
+isFav: true
+),
+RecommandedPlaceModel(image: 'lib/images/home6.png',
+location: "Magtaa lhjar",
+rating: 4.4,
+type: "House",
+isFav: true
+),
+RecommandedPlaceModel(image: 'lib/images/home7.jpeg',
+location: "Magtaa lhjar",
+rating: 4.4,
+type: "House",
+isFav: true
+),
 
 ];

@@ -1,12 +1,20 @@
+import 'dart:convert';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:project_pfe/Welcome_page.dart';
+import 'package:project_pfe/pages/navpages/bar_item_page.dart';
 import 'package:project_pfe/pages/navpages/home_page.dart';
 import 'package:project_pfe/pages/navpages/my_page.dart';
 import 'package:project_pfe/wigdet/button.dart';
 
+
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
+ // await DotEnv.load(fileName: ".env");
+
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
@@ -23,6 +31,57 @@ class MyApp extends StatelessWidget {
   );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Copyright 2013 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be

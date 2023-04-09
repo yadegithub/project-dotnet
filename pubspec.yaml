@@ -37,6 +37,12 @@ dependencies:
   firebase_core: ^2.8.0
   curved_navigation_bar: ^1.0.3
   
+  chat_gpt_sdk: ^2.0.8
+  velocity_x: ^3.6.0
+  flutter_dotenv: ^5.0.2
+  
+
+  
   firebase_auth: ^4.3.0
   cloud_firestore: ^4.4.5
   flutter_facebook_auth: ^5.0.8
@@ -60,16 +66,20 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  
+    
 
   # To add assets to your application, add an assets section, like this:
   assets:
     - lib/images/
-  #   - images/a_dot_ham.jpeg
-
+    - .env
+    
+     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

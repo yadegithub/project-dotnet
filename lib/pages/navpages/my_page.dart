@@ -1,8 +1,11 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:project_pfe/Welcome_page.dart';
 import 'package:project_pfe/constants/constants.dart';
 import 'package:project_pfe/models/item_model.dart';
+import 'package:project_pfe/pages/detail_page.dart';
 import 'package:project_pfe/pages/navpages/customappbar.dart';
+import 'package:project_pfe/pages/navpages/rent_page.dart';
 
 import 'package:project_pfe/wigdet/house_card.dart';
 import 'package:project_pfe/wigdet/recomendation.dart';
@@ -13,6 +16,8 @@ import 'package:project_pfe/wigdet/suggestion_list.dart';
 import '../../models/recommended_places.dart';
 
 import '../../wigdet/nearby_places.dart';
+import 'bar_item_page.dart';
+import 'home_page.dart';
 
 class EstateProperty extends StatefulWidget {
   const EstateProperty({Key? key}) : super(key: key);
@@ -22,7 +27,17 @@ class EstateProperty extends StatefulWidget {
 }
 
 class _EstatePropertyState extends State<EstateProperty> {
-    int selsctedIconIndex = 2;
+  
+     GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+       int selsctedIconIndex = 2;
+        List pages=[
+    HomePage(),
+   ChatPage(),
+   SearchPage(),
+   WelcomPage(),
+   DetailPage()
+
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,23 +67,12 @@ class _EstatePropertyState extends State<EstateProperty> {
       
       
       //backgroundColor: Colors.white,
-      body:Container(
-        child:getSelectedWidget(index: index) ,
-      )
+      body:pages[selsctedIconIndex],
+
       );
       
-    
-    Widget getSelectedWidget({required int index}){
-    Widget widget;
-    switch(index){
-      widget = const my_page();
-      break;
-      case 1:
-       widget = const my_page();
-    }
-  }
-  }
+  
 
-
+  }
  
-}
+  }
