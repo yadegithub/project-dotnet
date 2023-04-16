@@ -95,10 +95,10 @@ class _WelcomPageState extends State<WelcomPage> {
 SizedBox(height: 20,),
  InkWell(
   onTap: (){
-    Navigator.push(context,
-     MaterialPageRoute(builder: (context)=> LoginWitheFacbook()
-     )
-     );
+    // // Navigator.push(context,
+    // //  MaterialPageRoute(builder: (context)=> LoginWitheFacbook()
+    // //  )
+    //  );
     // _googleSignIn.signIn().then((value){
        
     //    String userName = value!.displayName!;

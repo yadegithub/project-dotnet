@@ -4,6 +4,7 @@ import 'package:flutter/painting.dart';
 import 'package:project_pfe/constants/constants.dart';
 import 'package:project_pfe/models/product_model.dart';
 import 'package:project_pfe/models/recommended_places.dart';
+import 'package:project_pfe/pages/details/components/bottom_buttons.dart';
 import 'package:project_pfe/pages/details/components/star_rating.dart';
 
 class ProductDetails extends StatelessWidget {
@@ -158,44 +159,47 @@ class ProductDetails extends StatelessWidget {
               ),),
               SizedBox(height: 30,),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: size.width * 0.6,
-                    height: 75,
-                    decoration: BoxDecoration(
-                      color: Color(0xFF26A69A),
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: Center(
-                      child: Text('Pay',style: TextStyle(
-                        color: white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),),
-                    ),
-                  ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Container(
+              //       width: size.width * 0.6,
+              //       height: 75,
+              //       decoration: BoxDecoration(
+              //         color: Color(0xFF26A69A),
+              //         borderRadius: BorderRadius.circular(25),
+              //       ),
+              //       child: Center(
+              //         child: Text('Pay',style: TextStyle(
+              //           color: white,
+              //           fontSize: 20,
+              //           fontWeight: FontWeight.bold,
+              //         ),),
+              //       ),
+              //     ),
 
-                  Container(
-                    width: size.width * 0.2,
-                    height: 75,
-                    decoration: BoxDecoration(
-                      color: black.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(25)
-                    ),
-                    child: Center(
-                      child: Icon(
-                        Icons.favorite_border_rounded,
-                        size: 30,
-                        color: black.withOpacity(0.4),
-                      ),
-                    ),
-                  )
-                ],
-              )
+              //     Container(
+              //       width: size.width * 0.2,
+              //       height: 75,
+              //       decoration: BoxDecoration(
+              //         color: black.withOpacity(0.2),
+              //         borderRadius: BorderRadius.circular(25)
+              //       ),
+              //       child: Center(
+              //         child: Icon(
+              //           Icons.favorite_border_rounded,
+              //           size: 30,
+              //           color: black.withOpacity(0.4),
+              //         ),
+              //       ),
+              //     )
+              //   ],
+              // )
+              BottomButtons()
             ],
+            
           ),
+          
         ),
       ),
     );

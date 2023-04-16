@@ -24,7 +24,10 @@ final ProductModel product;
             ProductDetails(productModel: product,),
             CustomAppBar(),
           ],
+
+          
         ),
+        
       ),
     );
   }

@@ -40,14 +40,19 @@ dependencies:
   chat_gpt_sdk: ^2.0.8
   velocity_x: ^3.6.0
   flutter_dotenv: ^5.0.2
+  geolocator: ^9.0.2
+  google_maps_flutter: ^2.2.5
+  awesome_snackbar_content: ^0.1.2
   
-
   
   firebase_auth: ^4.3.0
   cloud_firestore: ^4.4.5
   flutter_facebook_auth: ^5.0.8
+  simple_animations: ^5.0.0+3
   google_sign_in: ^6.0.2
   http: ^0.13.5
+  flutter_google_places: ^0.3.0
+  flutter_login_facebook: ^1.8.0
 
 dev_dependencies:
   flutter_test:

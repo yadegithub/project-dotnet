@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_pfe/constants/constants.dart';
 import 'package:project_pfe/models/recommended_places.dart';
+import 'package:project_pfe/wigdet/Houses_page.dart';
 
 
 
@@ -47,6 +48,12 @@ class _CategoriesState extends State<Categories> {
 
     return GestureDetector(
       onTap: () {
+         Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => HomeScreen(),
+          ),
+        );
         setState(() {
           selectedCategoryIndex = index;
         });

@@ -1,9 +1,15 @@
 import 'dart:convert';
 
+import 'dart:io';
+
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+
 import 'package:project_pfe/Welcome_page.dart';
+import 'package:project_pfe/pages/frist_page.dart';
 import 'package:project_pfe/pages/navpages/bar_item_page.dart';
 import 'package:project_pfe/pages/navpages/home_page.dart';
 import 'package:project_pfe/pages/navpages/my_page.dart';
@@ -12,7 +18,8 @@ import 'package:project_pfe/wigdet/button.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: ".env");
+  FacebookAuth.instance;
+ await dotenv.load(fileName: ".env");
  // await DotEnv.load(fileName: ".env");
 
   await Firebase.initializeApp();
@@ -20,6 +27,7 @@ Future<void> main() async{
 }
 
 class MyApp extends StatelessWidget {
+  
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.

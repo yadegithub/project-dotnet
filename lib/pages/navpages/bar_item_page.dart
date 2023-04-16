@@ -20,7 +20,7 @@ class ChatPage extends StatefulWidget {
 }
 
 Future<String> generateResponse(String prompt) async {
-  final apiKey = "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";
+  final apiKey = "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";
 
   var url = Uri.https("api.openai.com", "/v1/completions");
   final response = await http.post(
@@ -37,13 +37,17 @@ Future<String> generateResponse(String prompt) async {
       'top_p': 1,
       'frequency_penalty': 0.0,
       'presence_penalty': 0.0,
-    }),
+    }
+    ),
   );
 
   // Do something with the response
+  
   Map<String, dynamic> newresponse = jsonDecode(response.body);
-
+  
+ // print(response.body);
   return newresponse['choices'][0]['text'];
+  
 }
 
 class _ChatPageState extends State<ChatPage> {
@@ -216,7 +220,7 @@ class ChatMessageWidget extends StatelessWidget {
                   child: CircleAvatar(
                     backgroundColor: const Color.fromRGBO(16, 163, 127, 1),
                     child: Image.asset(
-                      'lib/images/bot.png',
+                      'lib/images/bot.jpg',
                       color: Colors.white,
                       scale: 1.5,
                     ),

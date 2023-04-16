@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:project_pfe/constants/constants.dart';
 
+import '../pages/navpages/current_location_screen.dart';
+
 class BottomButtons extends StatelessWidget {
   
   @override
@@ -12,6 +14,9 @@ class BottomButtons extends StatelessWidget {
     return GestureDetector(
       onTap: (() {
        // getcurrentlocation();
+       Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                return const CurrentLocationScreen();
+              }));
       }),
       child: Padding(
         padding: const EdgeInsets.only(bottom: appPadding),
@@ -35,7 +40,8 @@ class BottomButtons extends StatelessWidget {
                 color: white,
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
-              ),)
+              ),),
+             
             ],
           ),
         ),
