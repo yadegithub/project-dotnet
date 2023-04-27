@@ -15,6 +15,8 @@ const Color LigntGreen = Color(0xFF80CBC4);
 const Color red = Colors.red;
 const Color darkBlue = Color.fromRGBO(19, 26, 44, 1.0);
 
+const kPrimaryColor = Color(0xfff1bb274);
+const kPrimaryLightColor = Color(0xfffeeeee4);
 
 //padding
 

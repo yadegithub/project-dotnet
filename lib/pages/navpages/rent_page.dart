@@ -77,14 +77,14 @@ class SearchPage extends StatelessWidget {
                Icon(
                     Icons.mic_none_rounded,
                     size: 30.0,
-                    color: Colors.grey.shade500,
+                  
                   ),
               Stack(
                 children: [
                   Icon(
                     Icons.notifications_none_rounded,
                     size: 30.0,
-                    color: Colors.grey.shade500,
+                    
                   ),
                   Container(
                     decoration: BoxDecoration(

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:project_pfe/Welcome_page.dart';
 import 'package:project_pfe/constants/constants.dart';
 import 'package:project_pfe/models/item_model.dart';
+import 'package:project_pfe/page/page/home_page.dart';
+import 'package:project_pfe/pages/Dashborder.dart';
 import 'package:project_pfe/pages/detail_page.dart';
 import 'package:project_pfe/pages/navpages/customappbar.dart';
 import 'package:project_pfe/pages/navpages/rent_page.dart';
@@ -15,6 +17,7 @@ import 'package:project_pfe/wigdet/suggestion_list.dart';
 
 import '../../models/recommended_places.dart';
 
+import '../../page/profile_page.dart';
 import '../../wigdet/nearby_places.dart';
 import 'bar_item_page.dart';
 import 'home_page.dart';
@@ -34,8 +37,8 @@ class _EstatePropertyState extends State<EstateProperty> {
     HomePage(),
    ChatPage(),
    SearchPage(),
-   WelcomPage(),
-   DetailPage()
+   ProfilePage(),
+   Dashborder()
 
   ];
   @override
@@ -47,7 +50,7 @@ class _EstatePropertyState extends State<EstateProperty> {
         index: selsctedIconIndex,
         buttonBackgroundColor: Color(0xFF26A69A),
         height: 60.0,
-        color: white,
+        
         onTap: (index) {
           setState(() {
             selsctedIconIndex = index;
@@ -57,11 +60,11 @@ class _EstatePropertyState extends State<EstateProperty> {
           milliseconds: 200,
         ),
         items: <Widget>[
-          Icon(Icons.play_arrow_outlined, size: 30,color: selsctedIconIndex == 0 ? white : black,),
-          Icon(Icons.search, size: 30,color: selsctedIconIndex == 1 ? white : black,),
-          Icon(Icons.home_outlined, size: 30,color: selsctedIconIndex == 2 ? white : black,),
-          Icon(Icons.favorite_border_outlined, size: 30,color: selsctedIconIndex == 3 ? white : black,),
-          Icon(Icons.person_outline, size: 30,color: selsctedIconIndex == 4 ? white : black,),
+          Icon(Icons.play_arrow_outlined, size: 30),
+          Icon(Icons.search, size: 30,),
+          Icon(Icons.home_outlined, size: 30,),
+          Icon(Icons.favorite_border_outlined, size: 30,),
+          Icon(Icons.person_outline, size: 30,),
         ],
       ),
       

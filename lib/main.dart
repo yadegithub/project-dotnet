@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
@@ -13,11 +14,17 @@ import 'package:project_pfe/pages/frist_page.dart';
 import 'package:project_pfe/pages/navpages/bar_item_page.dart';
 import 'package:project_pfe/pages/navpages/home_page.dart';
 import 'package:project_pfe/pages/navpages/my_page.dart';
+import 'package:project_pfe/provider/theme_provider.dart';
 import 'package:project_pfe/wigdet/button.dart';
+import 'package:provider/provider.dart';
 
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
+   await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   FacebookAuth.instance;
  await dotenv.load(fileName: ".env");
  // await DotEnv.load(fileName: ".env");
@@ -27,17 +34,26 @@ Future<void> main() async{
 }
 
 class MyApp extends StatelessWidget {
-  
+  static const String title = 'Light & Dark Theme';
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)=> ChangeNotifierProvider(
+        create: (context) => ThemeProvider(),
+        builder: (context, _) {
+          final themeProvider = Provider.of<ThemeProvider>(context);
+ 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+       themeMode: themeProvider.themeMode,
+            theme: MyThemes.lightTheme,
+            darkTheme: MyThemes.darkTheme,
+            title: title,
     home:EstateProperty()
   );
-  }
+  },
+  );
 }
 
 
